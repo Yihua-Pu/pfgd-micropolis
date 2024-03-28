@@ -353,6 +353,7 @@ class RoadLikeTool extends ToolStroke
 		final int UNDERWATER_WIRE_COST = 25;
 
 		int cost = WIRE_COST;
+		
 
 		char tile = (char) eff.getTile(0, 0);
 		tile = neutralizeRoad(tile);
@@ -363,7 +364,7 @@ class RoadLikeTool extends ToolStroke
 		case REDGE:
 		case CHANNEL:
 
-			cost = WIRE_COST;
+			cost = UNDERWATER_WIRE_COST;
 
 			// check east
 			{
