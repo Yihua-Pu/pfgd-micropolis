@@ -1046,6 +1046,12 @@ public class MainWindow extends JFrame
 		gridBox.add(b6,c);
 
 		b6.add(makeToolBtn(MicropolisTool.AIRPORT));
+		
+		c.gridy++;
+		Box b7 = new Box(BoxLayout.X_AXIS);
+		gridBox.add(b7,c);
+
+		b7.add(makeToolBtn(MicropolisTool.TORNADOTOOL));
 
 		// add glue to make all elements align toward top
 		c.gridy++;
@@ -1106,6 +1112,11 @@ public class MainWindow extends JFrame
 
 		ZoneStatus z = engine.queryZoneStatus(xpos, ypos);
 		notificationPane.showZoneStatus(engine, xpos, ypos, z);
+	}
+	
+	void doTornadoTool(int xpos, int ypos)
+	{
+		engine.makeTornadoAt(xpos, ypos);
 	}
 
 	private void doZoom(int dir, Point mousePt)
@@ -1177,6 +1188,11 @@ public class MainWindow extends JFrame
 			doQueryTool(x, y);
 			this.toolStroke = null;
 		}
+		else if (currentTool == MicropolisTool.TORNADOTOOL) {
+			doTornadoTool(x, y);
+			this.toolStroke = null;
+		}
+		
 		else {
 			this.toolStroke = currentTool.beginStroke(engine, x, y);
 			previewTool();

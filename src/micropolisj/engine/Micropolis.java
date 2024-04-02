@@ -2367,6 +2367,16 @@ public class Micropolis
 		sprites.add(new TornadoSprite(this, xpos, ypos));
 		sendMessageAt(MicropolisMessage.TORNADO_REPORT, xpos, ypos);
 	}
+	
+	public void makeTornadoAt(int xpos, int ypos)
+	{
+		
+		budget.totalFunds += 100;
+		fireFundsChanged();
+		sprites.add(new TornadoSprite(this, xpos, ypos));
+		sendMessageAt(MicropolisMessage.TORNADO_REPORT, xpos, ypos);
+	}
+
 
 	public void makeFlood()
 	{

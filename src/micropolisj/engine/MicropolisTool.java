@@ -15,6 +15,7 @@ package micropolisj.engine;
 public enum MicropolisTool
 {
 	BULLDOZER(1, 1),
+	TORNADOTOOL(1, 0),
 	WIRE(1, 5),   //cost=25 for underwater
 	ROADS(1, 10), //cost=50 for over water
 	RAIL(1, 20),  //cost=100 for underwater
@@ -55,6 +56,8 @@ public enum MicropolisTool
 		switch (this) {
 		case BULLDOZER:
 			return new Bulldozer(engine, xpos, ypos);
+		case TORNADOTOOL:
+			return new TornadoTool(engine, xpos, ypos);
 
 		case WIRE:
 		case ROADS:
