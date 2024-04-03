@@ -56,8 +56,6 @@ public enum MicropolisTool
 		switch (this) {
 		case BULLDOZER:
 			return new Bulldozer(engine, xpos, ypos);
-		case TORNADOTOOL:
-			return new TornadoTool(engine, xpos, ypos);
 
 		case WIRE:
 		case ROADS:

@@ -118,6 +118,11 @@ menu.help.about = À propos
 !
 ! Tools
 !
+
+tool.TORNADOTOOL.name            = TORNADOTOOL
+tool.TORNADOTOOL.icon            = /icnado.png
+tool.TORNADOTOOL.selected_icon   = /icnadohi.png
+tool.TORNADOTOOL.tip             = TORNADOTOOL
 tool.BULLDOZER.name            = BULLDOZER
 tool.BULLDOZER.icon            = /icdozr.png
 tool.BULLDOZER.selected_icon   = /icdozrhi.png
